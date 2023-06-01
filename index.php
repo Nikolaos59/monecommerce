@@ -6,7 +6,7 @@ require('./inc/init.inc.php');
 // echo session_status();
 // Notre accueil
 require('./inc/haut.inc.php');
-echo '<h2>Notre future page d\'accueil pour notre boutique</h2>'; ?>
+echo '<h2>Notre belle page d\'accueil pour notre boutique</h2>'; ?>
 
 <h2>Notre page d'accueil</h2>
 <p>Coincée entre le haut et le bas!</p><br>
