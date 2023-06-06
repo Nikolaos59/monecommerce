@@ -5,11 +5,12 @@ require __DIR__ . '/../vendor/autoload.php';
 Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/../')->load();
 
 //------- BDD
-$mysqli = new mysqli($_ENV ['DB_HOST'], $_ENV ['DB_USER'], $_ENV ['DB_PASSWORD'], $_ENV ['DB_NAME']);
+$mysqli = new mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
 if ($mysqli->connect_error)
     die('Un problème est survenu lors de la tentative de connexion à la BDD : ' . $mysqli->connect_error);
 // $mysqli->set_charset("utf8");
 // ------- SESSION 
+session_name("monecommerceID");
 session_start();
 // ------- CHEMIN 
 // print_r($_SERVER);
@@ -24,4 +25,5 @@ $_ENV['NOM_VARIABLE'] = 'Le nom de ma variable d\'environnement avec <span style
 
 // AUTRES INCLUSIONS
 require_once("functions.inc.php");
-debug($mysqli, 0);
+//debug($mysqli, 0);
+$contenu = "";
