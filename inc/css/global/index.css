@@ -27,5 +27,39 @@ footer {
     padding: 5px;
     margin: 5px;
 }
+.profil {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid rgb(18, 7, 239);
+    border-radius: 10px;
+}
 
+.profil > .centre {
+    text-align: center;
+}
+
+.profil > .cadre > h2 {
+    padding: 10px 0;
+    margin: 10px 0;
+    border: 2px solid rgb(52, 52, 52);
+    border-left: none;
+    border-right: none;
+}
   
+table {
+    border-collapse: collapse;
+    min-width: 1280px;
+    width: 95%;
+}
+
+table tr td {
+    text-align:center;
+}
+
+td, th {
+    padding: 5px;
+}
+table tr, table tr td {
+    border: 2px solid grey;
+}

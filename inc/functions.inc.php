@@ -1,13 +1,19 @@
 <?php
+
 function executeRequete($req)
 {
     global $mysqli;
-    $resultat = $mysqli->query($req);
-    if (!$resultat) {
-        die("Erreur sur la requete sql.<br>Message : " . $mysqli->error . "<br>Code: " . $req);
+    try {
+        $resultat = $mysqli->query($req);
+        if (!$resultat) {
+            die("Erreur sur la requete sql.<br>Message : " . $mysqli->error . "<br>Code: " . $req);
+        }
+        return $resultat;
+    } catch (Exception $e) {
+        return $e;
     }
-    return $resultat;
 }
+
 function debug($var, $mode = 1)
 {
     echo '<div style="background: orange; padding: 5px; float: right; clear: both; ">';
@@ -24,4 +30,16 @@ function debug($var, $mode = 1)
         echo '</pre>';
     }
     echo '</div>';
+}
+function internauteEstConnecte()
+{
+    if (!isset($_SESSION['utilisateur'])) return false;
+    else return true;
+}
+
+function internauteEstConnecteEtEstAdmin()
+{
+    if (internauteEstConnecte() && $_SESSION['utilisateur']['statut'] == 1)
+        return true;
+    else return false;
 }
