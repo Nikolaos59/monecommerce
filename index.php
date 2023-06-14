@@ -1,5 +1,7 @@
 <?php
 require('./inc/init.inc.php');
+
+
 // Pour le debug
 // var_dump(RACINE_SITE);
 // echo '<br>';
@@ -7,7 +9,6 @@ require('./inc/init.inc.php');
 // Notre accueil
 require('./inc/haut.inc.php');
 echo '<h2>Notre belle page d\'accueil pour notre boutique</h2>'; ?>
-
 <h2>Notre page d'accueil</h2>
 <p>Coincée entre le haut et le bas!</p><br>
 <?php
