@@ -1,5 +1,6 @@
 <?php
 require('./inc/init.inc.php');
+$title = " | Accueil";
 
 
 // Pour le debug
